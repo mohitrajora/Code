@@ -1,0 +1,1 @@
+answer+=lastdigit*pow(10,i);
