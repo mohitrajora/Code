@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: sienna;
+            border: 5px solid black;
+            position: relative; /* Make sure container has a reference for positioning */
+        }
+        .box {
+            height: 7.5vh;
+            width: 15vw;
+            background-color: aquamarine;
+            border: 3px solid blue;
+            border-radius: 10px;
+            margin: 10px;
+            position: absolute; /* Position absolute to move within the container */
+            animation-name: RightMovement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+            /* animation-fill-mode: forwards; agar block ko jis trf chl rha he vha rokna he iska use krenge */
+        }
+        .box1{
+            height: 7.5vh;
+            width: 15vw;
+            background-color: aquamarine;
+            border: 3px solid blue;
+            border-radius: 10px;
+            margin: 10px;
+            position: absolute; /* Position absolute to move within the container */
+            animation-name: LeftMovement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+        .circle{
+            height: 100px;
+            width: 100px;
+            background-color: aquamarine;
+            border: 3px solid blue;
+            border-radius: 50px;
+            margin: 10px;
+            position: absolute;
+            top: 300px;
+            left: 675px;
+            animation-name: CircleMovement;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
+        /* Keyframes should be defined outside of the class selector */
+        @keyframes RightMovement {
+            from {
+                top: 0;
+                left: 0;
+            }
+            to {
+                top: 0;
+                left: 1200px;
+            }
+        }
+        @keyframes LeftMovement {
+            from {
+                bottom: 0px;
+                left: 1200px;
+            }
+            to {
+                bottom: 0;
+                left: 0px;
+            }
+        }
+        @keyframes CircleMovement {
+           0%{
+            top: 5%;
+            left: 5%;
+           }
+           30%{
+            top: 80%;
+            left: 40%;
+           }
+           60%{
+            top: 5%;
+            left: 90%;
+           }
+           100%{
+            top: 85%;
+            left: 30%;
+           }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box1"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
