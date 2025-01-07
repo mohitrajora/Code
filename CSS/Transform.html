@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        .container{
+            height: 100vh;
+            width: 100vw;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .box{
+            height: 300px;
+            width: 300px;
+            background-color: chocolate;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 3s linear 0s;
+        }
+        p{
+            font-size: 36px;
+        }
+        .box:hover{
+            /* transform: rotate(45deg); */
+            /* transform: rotate(-45deg);
+            transform: rotate(75deg); */
+            /* transform: scale(2); */
+            /* transform: scale(0.5);
+            transform: skew(45deg);
+            transform: translate(100px,100px); */
+            transform: matrix(1,2,3,4,5,1);
+            /*  "transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())"- a shorthand notation */
+
+            /* if we aplly all transform properties in one time the last property will apply on the element */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>This is a box</p>
+        </div>
+    </div>
+</body>
+</html>
