@@ -45,7 +45,7 @@ $interested_users_properties = mysqli_fetch_all($result_3, MYSQLI_ASSOC);
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Best PG's in Mumbai | PG Life</title>
+    <title>Best PG's in <?php echo $city_name ?> | PG Life</title>
 
     <?php
     include "includes/head_links.php";
@@ -58,7 +58,7 @@ $interested_users_properties = mysqli_fetch_all($result_3, MYSQLI_ASSOC);
     include "includes/header.php";
     ?>
 
-<nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb py-2">
             <li class="breadcrumb-item">
                 <a href="index.php">Home</a>

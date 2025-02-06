@@ -1,13 +1,14 @@
 <div class="header sticky-top">
-        <div class="navbar navbar-expand-md navbar-light">
-            <a href="index.php" class="navbar-brand">
-                <img src="../img/logo.png" alt="home" class="logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse justify-content-end" id="my-navbar">
-                <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-md navbar-light">
+        <a class="navbar-brand" href="index.php">
+            <img src="img/logo.png" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#my-navbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="my-navbar">
+            <ul class="navbar-nav">
                 <?php
                 //Check if user is loging or not
                 if (!isset($_SESSION["user_id"])) {

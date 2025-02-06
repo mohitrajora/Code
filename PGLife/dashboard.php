@@ -34,16 +34,17 @@ $interested_properties = mysqli_fetch_all($result_2, MYSQLI_ASSOC);
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard | PG Life</title>
+
     <?php
     include "includes/head_links.php";
     ?>
-    <link rel="stylesheet" href="css/dashboard.css">
-
+    <link href="css/dashboard.css" rel="stylesheet" />
 </head>
+
 <body>
     <?php
     include "includes/header.php";
@@ -52,13 +53,14 @@ $interested_properties = mysqli_fetch_all($result_2, MYSQLI_ASSOC);
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb py-2">
             <li class="breadcrumb-item">
-                <a href="index.php" class="breadcrumb-link">Home</a>
+                <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
                 Dashboard
             </li>
         </ol>
     </nav>
+
     <div class="my-profile page-container">
         <h1>My Profile</h1>
         <div class="row">
@@ -68,15 +70,15 @@ $interested_properties = mysqli_fetch_all($result_2, MYSQLI_ASSOC);
             <div class="col-md-9">
                 <div class="row no-gutters justify-content-between align-items-end">
                     <div class="profile">
-                        <div class="name">Mohit Rajora</div>
-                        <div class="email">mohitrajora1432@gmail.com</div>
-                        <div class="phone">6377793841</div>
-                        <div class="location">Jaipur</div>
+                        <div class="name"><?= $user['full_name'] ?></div>
+                        <div class="email"><?= $user['email'] ?></div>
+                        <div class="phone"><?= $user['phone'] ?></div>
+                        <div class="college"><?= $user['college_name'] ?></div>
                     </div>
                     <div class="edit">
                         <div class="edit-profile">Edit Profile</div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </div>
@@ -171,4 +173,5 @@ $interested_properties = mysqli_fetch_all($result_2, MYSQLI_ASSOC);
     include "includes/footer.php";
     ?>
 </body>
+
 </html>

@@ -52,13 +52,12 @@ $interested_users = mysqli_fetch_all($result_4, MYSQLI_ASSOC);
 $interested_users_count = mysqli_num_rows($result_4);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ganpati Paying Guest | PG Life</title>
+    <title><?= $property['property_name']; ?> | PG Life</title>
 
     <?php
     include "includes/head_links.php";
@@ -77,17 +76,17 @@ $interested_users_count = mysqli_num_rows($result_4);
                 <a href="index.php">Home</a>
             </li>
             <li class="breadcrumb-item">
-                <a href="property_list.php">Mumbai</a>
+                <a href="property_list.php?city=<?= $property['city_name']; ?>"><?= $property['city_name']; ?></a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-                Ganpati Paying Guest
+                <?= $property['property_name']; ?>
             </li>
         </ol>
     </nav>
 
     <div id="property-images" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-        <?php
+            <?php
             $property_images = glob("img/properties/" . $property['property_id'] . "/*");
             foreach ($property_images as $index => $property_image) {
             ?>
