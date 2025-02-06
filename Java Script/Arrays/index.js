@@ -79,9 +79,26 @@
 // reduce me do variable hote he accumalator and current agr hm accumalator ki value dete he tb to array ka first element current ho jata he
 // agr accumalator ki value nhi dete he tb array ka first element accumalator bn jata he and second eleement current bn jata he
 
-let arr = [10,20,30,40];
-let ans = arr.reduce((accumalator,current) => {
-    return accumalator+current;
-},0)  // this value is assigned to accumalator 
+// let arr = [10,20,30,40];
+// let ans = arr.reduce((accumalator,current) => {
+//     return accumalator+current;
+// },0)  // this value is assigned to accumalator 
 
-console.log(ans);
+// console.log(ans);
+
+// shorting
+
+// let arr = [5,2,8,1,3,6];
+// let ans = arr.sort();
+// console.log(ans);
+
+// in desending order...
+
+// let ans = arr.sort();
+// ans = arr.reverse();
+// console.log(ans);
+
+// Find index of value..
+// console.log(arr.indexOf(1));
+let arr = [5,2,8,1,3,6];
+console.log(arr.find(number => number<8));
