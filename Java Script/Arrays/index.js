@@ -100,5 +100,48 @@
 
 // Find index of value..
 // console.log(arr.indexOf(1));
-let arr = [5,2,8,1,3,6];
-console.log(arr.find(number => number<8));
+// let arr = [5,2,8,1,3,6];
+// console.log(arr.find(number => number<8));
+// it will print the first value that satisfy the condition of the function...
+
+// for-each loop
+// let arr = [10,20,30,40];
+// arr.forEach((value,index) => 
+// console.log("Number: ",value, "Index: ",index));
+
+// for-in loop
+// let obj = {
+//         name: "Mohit Rajora",
+//         height: 5.11,
+//         greet: function(){
+//             console.log("Hello Sirrrrrrr");
+//         }
+//     };
+// for(let key in obj){
+//     console.log(key," ",obj[key]);
+// }
+
+// for-of loop
+// let arr = [10,20,30];
+// for(let value of arr){
+//     console.log(value);
+// }
+
+// let fullName = "mohit";
+// for(let char of fullName){
+//     console.log(char);
+// }
+
+// Arrays with Functions
+
+// let arr = [10,20,30,40,50];
+// let getSum = (arr) =>{
+//     let sum=0;
+//     arr.forEach((value)=>{
+//         sum+=value;
+//     })
+//     return sum;
+// }
+
+// let totalSum = getSum(arr);
+// console.log(totalSum);
